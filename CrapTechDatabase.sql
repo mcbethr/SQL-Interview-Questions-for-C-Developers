@@ -191,8 +191,26 @@ HASHBYTES('SHA2_256','IllThrowMyShoeAtYou'),
 1
 )
 
+---Create View
 CREATE VIEW EmployeeDuties AS
 select Firstname,Lastname, JobName from EMPLOYEE 
 INNER JOIN EMPLOYEE_TYPE
 on EMPLOYEE.Jobcode = EMPLOYEE_TYPE.JobCode
 WHERE EMPLOYEE.terminated = 0;
+
+
+--Create Stored procedure
+CREATE PROCEDURE UpdatePassword @NewPassword varchar(255)
+AS
+
+UPDATE EMPLOYEE SET Psword = @NewPassword;
+
+--Create Function
+CREATE FUNCTION CALCULATE_RAISE (@Salary float, @RaiseAmount float)
+RETURNS float
+AS
+BEGIN
+
+RETURN (SELECT (@salary*@RaiseAmount));
+
+END
