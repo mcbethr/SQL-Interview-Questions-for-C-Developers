@@ -26,7 +26,7 @@ JobName varchar(255) NOT NULL
 
 insert into EMPLOYEE_TYPE (JobCode,JobName) Values (100,'Junior Programmer')
 insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (200,'Midlevel Programmer')
-insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (300,'Senior Programmer')
+insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (300,'Segnior Programmer')
 insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (400,'Principal Programmer')
 insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (500,'Software Team Lead')
 insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (600,'Testing Team Lead')
@@ -35,7 +35,7 @@ insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (800,'Operations Manager')
 insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (900,'Project Manager')
 insert into EMPLOYEE_TYPE  (JobCode,JobName) Values (1000,'Software Architect')
 
-insert into EMPLOYEE (EmployeeID,EmployeeType,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 100,
 1000,
@@ -48,7 +48,7 @@ HASHBYTES('SHA2_256','Person@Bananna2Target'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 101,
 900,
@@ -61,7 +61,7 @@ HASHBYTES('SHA2_256','Protine2Powder'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 102,
 600,
@@ -74,7 +74,7 @@ HASHBYTES('SHA2_256','sensually4dubbedresourcesessions6'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 103,
 100,
@@ -87,7 +87,7 @@ HASHBYTES('SHA2_256','tinworkmathingcorrectchain'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 104,
 200,
@@ -100,7 +100,7 @@ HASHBYTES('SHA2_256','sillinessfifteenswiftlybackrest'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 50,
 400,
@@ -113,7 +113,7 @@ HASHBYTES('SHA2_256','TheyShallNotPass'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 50,
 500,
@@ -126,7 +126,7 @@ HASHBYTES('SHA2_256','IHateMyLife'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 50,
 700,
@@ -139,7 +139,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 0
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 50,
 700,
@@ -152,7 +152,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 1
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 50,
 700,
@@ -165,7 +165,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 1
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 50,
 700,
@@ -178,7 +178,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 1
 )
 
-insert into EMPLOYEE (EmployeeID,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
+insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
 50,
 800,
