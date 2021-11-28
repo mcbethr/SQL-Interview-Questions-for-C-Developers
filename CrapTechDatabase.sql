@@ -212,7 +212,7 @@ GO
 CREATE PROCEDURE UpdatePassword @NewPassword varchar(255), @EmployeeID int
 AS
 
-UPDATE EMPLOYEE SET Psword = @NewPassword;
+UPDATE EMPLOYEE SET Psword = @NewPassword WHERE EmployeeID = @EmployeeID;
 GO
 
 
@@ -228,3 +228,19 @@ END
 GO
 
 --Create Trigger.
+CREATE TRIGGER Employee_Password_Change
+ON EMPLOYEE
+
+AFTER UPDATE
+AS
+INSERT INTO PASSWORD_HISTORY (EmployeeID,OldPassword,DateChanged)
+VALUES(
+(select EmployeeID from inserted),
+(select Psword from deleted),
+GETDATE() 
+)
+GO
+
+--Create Clustered index on Employe table on Salary ascending
+CREATE NONCLUSTERED INDEX IX_Table_Employee_Salary
+ON Employee(Salary ASC)
