@@ -3,6 +3,7 @@
 
 drop table EMPLOYEE;
 drop table EMPLOYEE_TYPE;
+drop table PASSWORD_HISTORY;
 
 create table EMPLOYEE(
 ID int IDENTITY(1,1) PRIMARY KEY,
@@ -22,6 +23,13 @@ create table EMPLOYEE_TYPE(
 ID int IDENTITY(1,1) PRIMARY KEY,
 JobCode int NOT NULL,
 JobName varchar(255) NOT NULL
+)
+
+create table PASSWORD_HISTORY(
+ID int IDENTITY(1,1) PRIMARY KEY,
+EmployeeID int NOT NULL,
+OldPassword varchar(255) NOT NULL,
+DateChanged DATETIME NOT NULL
 )
 
 insert into EMPLOYEE_TYPE (JobCode,JobName) Values (100,'Junior Programmer')
@@ -128,7 +136,7 @@ HASHBYTES('SHA2_256','IHateMyLife'),
 
 insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
-50,
+40,
 700,
 'Joel',
 '',
@@ -141,7 +149,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 
 insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
-50,
+41,
 700,
 'Joel',
 '',
@@ -154,7 +162,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 
 insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
-50,
+42,
 700,
 'Joel',
 '',
@@ -167,7 +175,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 
 insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
-50,
+43,
 700,
 'Joel',
 '',
@@ -180,7 +188,7 @@ HASHBYTES('SHA2_256','Hope4TheFuture'),
 
 insert into EMPLOYEE (EmployeeID,JobCode,Firstname,MiddleName,Lastname,Username,Psword,Salary,Terminated)
 values(
-50,
+45,
 800,
 'Janet',
 '',
@@ -214,3 +222,6 @@ BEGIN
 RETURN (SELECT (@salary*@RaiseAmount));
 
 END
+
+
+--Create Trigger.
