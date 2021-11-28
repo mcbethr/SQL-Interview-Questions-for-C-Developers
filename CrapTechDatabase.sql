@@ -1,9 +1,9 @@
---CREATE DATABASE CrapTech
+CREATE DATABASE CrapTech
+USE CrapTech
 
-
-drop table EMPLOYEE;
-drop table EMPLOYEE_TYPE;
-drop table PASSWORD_HISTORY;
+--drop table EMPLOYEE;
+--drop table EMPLOYEE_TYPE;
+--drop table PASSWORD_HISTORY;
 
 create table EMPLOYEE(
 ID int IDENTITY(1,1) PRIMARY KEY,
@@ -198,6 +198,7 @@ HASHBYTES('SHA2_256','IllThrowMyShoeAtYou'),
 200000,
 1
 )
+GO
 
 ---Create View
 CREATE VIEW EmployeeDuties AS
@@ -205,13 +206,15 @@ select Firstname,Lastname, JobName from EMPLOYEE
 INNER JOIN EMPLOYEE_TYPE
 on EMPLOYEE.Jobcode = EMPLOYEE_TYPE.JobCode
 WHERE EMPLOYEE.terminated = 0;
-
+GO
 
 --Create Stored procedure
-CREATE PROCEDURE UpdatePassword @NewPassword varchar(255)
+CREATE PROCEDURE UpdatePassword @NewPassword varchar(255), @EmployeeID int
 AS
 
 UPDATE EMPLOYEE SET Psword = @NewPassword;
+GO
+
 
 --Create Function
 CREATE FUNCTION CALCULATE_RAISE (@Salary float, @RaiseAmount float)
@@ -222,6 +225,6 @@ BEGIN
 RETURN (SELECT (@salary*@RaiseAmount));
 
 END
-
+GO
 
 --Create Trigger.
